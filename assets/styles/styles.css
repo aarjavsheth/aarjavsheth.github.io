@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #experience i {
-	color: rgb(255, 138, 89);
+	color: #295496;
 	font-size: 4em;
 	margin-left: 1.25rem;
 }
@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #work h2 {
-	color: #FF6945;
+	color: #295496;
 	margin-bottom: .7em;
 }
 
@@ -182,16 +182,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .details .platform{
-	font-size: 0.8em;
+	font-size: 1.0em;
 	text-transform: uppercase;
 	margin: 2em 0 -0.1em;
 	font-family: "Maven pro", sans-serif;
 	font-weight: 500;
-	color: #ff7654;
+	color: #295496;
 }
 
 .details i {
-	color: #ff7654;
+	color: #295496;
 	margin-right: 1em;
 }
 
@@ -204,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .details a, .details a:link, .details a:active{
-	color: rgba(255, 103, 68, 0.91);
+	color: #295496;
 	background-color: #060303;
 }
 
