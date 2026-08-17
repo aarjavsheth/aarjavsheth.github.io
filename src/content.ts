@@ -46,10 +46,10 @@ export const hero = {
 };
 
 export const about = {
-  body: "Staff Software Engineer with 4+ years of experience designing distributed systems and building scalable, cloud-native platforms. I specialize in developing backend architectures that are reliable, observable, and built to operate at scale.\n\n" +
-"In parallel, I’ve been actively building AI-powered applications, focusing on practical use of LLMs through Retrieval-Augmented Generation (RAG), prompt engineering, and real-time data pipelines. My approach is not to apply AI for the sake of it, but to integrate it where it meaningfully improves system capabilities and user outcomes.\n\n" +
-"At Automation Anywhere, I lead the design and development of core platform components, owning system reliability and driving key architectural decisions. I build production-grade backend systems using microservices and distributed system principles to support large-scale automation workflows.\n\n" + 
-"I also work closely with customer support and cloud infrastructure teams to investigate and resolve production issues in distributed environments. This involves deep debugging across services, analyzing system behavior under failure conditions, and identifying root causes under time-sensitive scenarios. Over time, this has strengthened my ability to quickly navigate complex systems, improve observability, and drive long-term reliability improvements. ",
+  body: "Staff Software Engineer with 5+ years of experience designing distributed systems and building scalable, cloud-native platforms. I specialize in backend architectures that are reliable, observable, and built to operate at scale, and I'm regularly the engineer pulled in when a system is failing under load or silently burning infrastructure cost.\n\n\
+  At Automation Anywhere, I lead the design and development of core platform components, owning system reliability and driving key architectural decisions across distributed, high-scale environments. This has included root-causing production incidents at the intersection of database internals, concurrency, and infrastructure cost, and making the call, backed by first-principles analysis, on when a proposed architectural rewrite is the wrong solution to the problem. I also work closely with customer support and cloud infrastructure teams to investigate and resolve production issues, which has sharpened my ability to navigate complex systems quickly, improve observability, and drive reliability improvements that outlast any single incident.\n\n\
+  Beyond my own project scope, I build tooling that scales other engineers' output, not just my own. I designed and shipped an internal context engineering system giving AI coding agents persistent, enforced architectural context across git repos, work that started as a personal initiative and is now adopted and mandated across 350+ engineers org-wide. I've taken the same approach to production-incident triage, turning a manual debugging workflow into an automated agent now used by my team. In parallel, I build AI-powered applications independent of that platform work, focused on practical use of LLMs through Retrieval-Augmented Generation (RAG), prompt engineering, and real-time data pipelines. \n\n\
+  My approach is not to apply AI for its own sake, but to integrate it where it meaningfully improves system capability or user outcomes.",
 };
 
 export const experience: Job[] = [
@@ -60,8 +60,13 @@ export const experience: Job[] = [
     stack:
       "Java, Spring, Hibernate, ActiveMQ, Distributed Cache, Microservices, Distributed Systems, REST APIs, LLM Integration, Observability & Debugging, Cloud Platforms (AWS/GCP), Docker, Kubernetes, SQL Databases",
     description:
-      "Owning backend architecture and feature delivery across multiple modules on a cloud-native automation platform, leveraging Java, microservices, REST APIs, and distributed systems.\nDeveloping AI-based productivity tools integrated with LLMs through prompt engineering and real-time data pipelines.\n" +
-  "Leading deep production debugging and root-cause analysis for critical customer-impacting incidents, using observability and debugging tools such as logs, metrics, and tracing systems to resolve complex failures and improve system reliability."
+      "- Designed and shipped an internal AI context-engineering platform providing coding agents persistent architectural context on large git repos, using hub-and-spoke docs, AST-derived knowledge graph, git-hooks auto-maintenance pipeline, and a harness layer requiring agents to consult context before acting. Drove adoption to 350+ engineers.\n\
+      - Automated production-incident triage across distributed Java platform by building an AI agent, replacing manual log correlation and cross-release diffing; adopted by a team of 19, reducing the initial review time by 60% and average resolution time by 25%\n\
+      - Authored a first-principles architecture rebuttal against a proposed WebSocket to SSE rewrite of a real-time execution-monitoring system. Quantified backpressure, thread-pinning, and replay-buffer memory cost at production event rate (~2,500 events/sec) and got the RFC rejected in favor of a targeted, lower-risk fix.\n\
+      - Designed AWS EC2/SSM cloud-provisioning logic for an elastic device-pool feature that auto-scales cloud-hosted device fleets, cutting idle infrastructure cost by ~35%\n\
+      - Root-caused production CPU spike on a sharded CockroachDB instance spanning ~60K tenants, 6 nodes, tracing via cross-node log correlation to an hourly job silently re-executing redundant O(N) computation. Redesigned to O(1), eliminating recurring cost.\n\
+      - Led a zero-downtime search migration (SQL to OpenSearch) across ~40M documents with feature-flag-gated cutover.\n\
+      - Conducted code reviews, shared architectural patterns, and promoted clean, maintainable code."
   },
   {
     title: "Graduate Teaching Assistant",
